@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./tm_backend
+      dockerfile: dockerfile
+    container_name: backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_URL=mongodb+srv://niajh:niajhsaajh2813@cluster0.4eyr8.mongodb.net/fullstack
+      - JWT_SECRET=jwtpass
+      - APP_PASS=bdqr exvc thgi rjmn
+
+  frontend:
+    build:
+      context: ./tm_frontend
+      dockerfile: dockerfile
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
