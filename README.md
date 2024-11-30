@@ -1,3 +1,18 @@
+## Setup
+
+1. Go to the directory where the `docker-compose.yaml` file is present.
+2. Run the following command to build the Docker containers:
+
+   ```bash
+    docker-compose build
+    docker-compose up
+   ```
+
+All required credentials, including the MongoDB Atlas URL and JWT secret, are already included in the `docker-compose.yaml` file. So there is **no need to set up environment variables** manually.
+
+> **Note:**  
+> This is temporary, and the history will be rewritten later.
+
 ## Endpoints
 
 ### 1. **User Authentication**
@@ -40,3 +55,9 @@ Content-Type: application/json
 }
 
 ```
+
+## Things Left to Do
+
+1. Fix Bug in Completed route.
+2. Proper Error Handling in Frontend.
+3. Add Pagination.
